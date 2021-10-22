@@ -1,0 +1,16 @@
+  [
+    {
+      "skip": true,
+      "name": "default",
+      "type": "sqlite",
+      "database": "./database_sqlite.db",
+      "autoSchemaSync": true,
+      "entities": [
+        "src/models/sqlite/**/*{.js,.ts}"
+      ],
+      "migrations": ["src/migrations/sqlite/**/*{.js,.ts}"],
+      "cli": {
+        "migrationsDir": "src/migrations/sqlite/"
+      }
+    }
+  ]

@@ -1,0 +1,168 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "3.0.1",
+    "title": "API SERVER - node-falemais",
+    "description": "Documentação automática gerada pelo modulo <b>swagger</b>."
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Servidor",
+      "description": "Teste conexão"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "securityDefinitions": {
+    "Bearer": {
+      "name": "x-access-token",
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token",
+      "bearerFormat": "JWT",
+      "in": "header"
+    }
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/falemais/{origem}/{destino}/{plano}/{minutos_falados}": {
+      "get": {
+        "tags": [
+          "Fale mais"
+        ],
+        "description": "TESTE - API - Serviço de Integração",
+        "parameters": [
+          {
+            "name": "origem",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "destino",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "plano",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "minutos_falados",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SUCESSO - API - Serviço de Integração"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Servidor"
+        ],
+        "description": "TESTE - API - Serviço de Integração",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "SUCESSO - API - Serviço de Integração"
+          }
+        }
+      }
+    },
+    "/origemdestino": {
+      "get": {
+        "tags": [
+          "Origem Destino"
+        ],
+        "description": "TESTE - API - Serviço de Integração",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "success": true,
+            "users": {
+              "id": "",
+              "username": "",
+              "email": "",
+              "date": ""
+            },
+            "description": "SUCESSO - API - Serviço de Integração"
+          },
+          "401": {
+            "success": false,
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/planos": {
+      "get": {
+        "tags": [
+          "Planos"
+        ],
+        "description": "TESTE - API - Serviço de Integração",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "success": true,
+            "users": {
+              "id": "",
+              "username": "",
+              "email": "",
+              "date": ""
+            },
+            "description": "SUCESSO - API - Serviço de Integração"
+          },
+          "401": {
+            "success": false,
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/planos/{minutos}": {
+      "get": {
+        "tags": [
+          "Planos"
+        ],
+        "description": "TESTE - API - Serviço de Integração",
+        "parameters": [
+          {
+            "name": "minutos",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SUCESSO - API - Serviço de Integração"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}
